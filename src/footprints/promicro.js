@@ -28,10 +28,13 @@ module.exports = {
     P7: 'P7',
     P8: 'P8',
     P9: 'P9',
+    Bplus: 'B+',
+    Bminus: 'B-'
   },
   params: {
     class: 'MCU',
-    orientation: 'down'
+    orientation: 'down',
+    batteryPins: false
   },
   body: p => {
     function standard(silk_layer) {
@@ -119,15 +122,31 @@ module.exports = {
         (pad 24 thru_hole circle (at 13.97 ${def_neg}7.62 0) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) ${p.net.P9.str})
       `
     }
+
+    function batteryPins(p, def_neg, def_pos, silk_layer, font_effect) {
+      if(p.param.batteryPins) {
+        return `
+          (fp_text user "B+" (at -16.51 ${def_pos}4.8 ${p.rot + 90}) (layer ${silk_layer}) (effects (font (size 0.8 0.8) (thickness 0.15)) ${font_effect}))
+          (fp_text user "B-" (at -16.51 ${def_neg}4.8 ${p.rot + 90}) (layer ${silk_layer}) (effects (font (size 0.8 0.8) (thickness 0.15)) ${font_effect}))
+          (pad 25 thru_hole roundrect (at -16.51 ${def_pos}7.62 0) (size 1.5 1.5) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) (roundrect_rratio 0.25) ${p.net.Bplus.str})
+          (pad 25 thru_hole roundrect (at -16.51 ${def_neg}7.62 0) (size 1.5 1.5) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) (roundrect_rratio 0.25) ${p.net.Bminus.str})
+        `
+      } else {
+        return ''
+      }
+    }
+
     if(p.param.orientation == 'down') {
       return `
         ${standard('F.SilkS')}
-        ${pins('-', '', 'F.SilkS', '')})
+        ${pins('-', '', 'F.SilkS', '')}
+        ${batteryPins(p, '-', '', 'F.SilkS', '')})
         `
     } else {
       return `
         ${standard('B.SilkS')}
-        ${pins('', '-', 'B.SilkS', '(justify mirror)')})
+        ${pins('', '-', 'B.SilkS', '(justify mirror)')}
+        ${batteryPins(p, '', '-', 'B.SilkS', '(justify mirror)')})
         `
     }
   }
