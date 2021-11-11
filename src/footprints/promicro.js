@@ -28,8 +28,8 @@ module.exports = {
     P7: 'P7',
     P8: 'P8',
     P9: 'P9',
-    Bplus: 'B+',
-    Bminus: 'B-'
+    Bplus: 'Bplus',
+    Bminus: 'Bminus'
   },
   params: {
     class: 'MCU',
