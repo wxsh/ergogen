@@ -31,20 +31,20 @@ module.exports = {
             (fp_line (start 2.5 2.5) (end 2.5 -2.5) (layer ${p.param.side}.SilkS) (width 0.15))
             (fp_line (start 2.5 -2.5) (end -2.5 -2.5) (layer ${p.param.side}.SilkS) (width 0.15))
 
-            (fp_poly (pts (xy ${def_pos}4 ${def_pos}2.2) (xy ${def_pos}4 ${def_pos}0.375) (xy ${def_pos}5 ${def_pos}1.2875)) (layer ${p.param.side}.SilkS) (width 0.1))
+            (fp_poly (pts (xy ${def_pos}4 2.2) (xy ${def_pos}4 0.375) (xy ${def_pos}5 1.2875)) (layer ${p.param.side}.SilkS) (width 0.1))
             `}
         
         function pins(def_neg, def_pos) {
             return `
-            (pad 1 smd rect (at ${def_neg}2.2 ${def_neg}0.875 ${p.rot}) (size 2.6 1) (layers ${p.param.side}.Cu ${p.param.side}.Paste ${p.param.side}.Mask) ${p.net.VCC.str})
-            (pad 2 smd rect (at ${def_neg}2.2 ${def_pos}0.875 ${p.rot}) (size 2.6 1) (layers ${p.param.side}.Cu ${p.param.side}.Paste ${p.param.side}.Mask) ${p.net.dout.str})
-            (pad 3 smd rect (at ${def_pos}2.2 ${def_pos}0.875 ${p.rot}) (size 2.6 1) (layers ${p.param.side}.Cu ${p.param.side}.Paste ${p.param.side}.Mask) ${p.net.GND.str})
-            (pad 4 smd rect (at ${def_pos}2.2 ${def_neg}0.875 ${p.rot}) (size 2.6 1) (layers ${p.param.side}.Cu ${p.param.side}.Paste ${p.param.side}.Mask) ${p.net.din.str})
+            (pad 1 smd rect (at ${def_neg}2.2 -0.875 ${p.rot}) (size 2.6 1) (layers ${p.param.side}.Cu ${p.param.side}.Paste ${p.param.side}.Mask) ${p.net.VCC.str})
+            (pad 2 smd rect (at ${def_neg}2.2 0.875 ${p.rot}) (size 2.6 1) (layers ${p.param.side}.Cu ${p.param.side}.Paste ${p.param.side}.Mask) ${p.net.dout.str})
+            (pad 3 smd rect (at ${def_pos}2.2 0.875 ${p.rot}) (size 2.6 1) (layers ${p.param.side}.Cu ${p.param.side}.Paste ${p.param.side}.Mask) ${p.net.GND.str})
+            (pad 4 smd rect (at ${def_pos}2.2 -0.875 ${p.rot}) (size 2.6 1) (layers ${p.param.side}.Cu ${p.param.side}.Paste ${p.param.side}.Mask) ${p.net.din.str})
 
-            (pad 11 smd rect (at ${def_neg}2.5 ${def_neg}1.6 ${p.rot}) (size 2 1.2) (layers ${p.param.side}.Cu ${p.param.side}.Paste ${p.param.side}.Mask) ${p.net.VCC.str})
-            (pad 22 smd rect (at ${def_neg}2.5 ${def_pos}1.6 ${p.rot}) (size 2 1.2) (layers ${p.param.side}.Cu ${p.param.side}.Paste ${p.param.side}.Mask) ${p.net.dout.str})
-            (pad 33 smd rect (at ${def_pos}2.5 ${def_pos}1.6 ${p.rot}) (size 2 1.2) (layers ${p.param.side}.Cu ${p.param.side}.Paste ${p.param.side}.Mask) ${p.net.GND.str})
-            (pad 44 smd rect (at ${def_pos}2.5 ${def_neg}1.6 ${p.rot}) (size 2 1.2) (layers ${p.param.side}.Cu ${p.param.side}.Paste ${p.param.side}.Mask) ${p.net.din.str})
+            (pad 11 smd rect (at ${def_neg}2.5 -1.6 ${p.rot}) (size 2 1.2) (layers ${p.param.side}.Cu ${p.param.side}.Paste ${p.param.side}.Mask) ${p.net.VCC.str})
+            (pad 22 smd rect (at ${def_neg}2.5 1.6 ${p.rot}) (size 2 1.2) (layers ${p.param.side}.Cu ${p.param.side}.Paste ${p.param.side}.Mask) ${p.net.dout.str})
+            (pad 33 smd rect (at ${def_pos}2.5 1.6 ${p.rot}) (size 2 1.2) (layers ${p.param.side}.Cu ${p.param.side}.Paste ${p.param.side}.Mask) ${p.net.GND.str})
+            (pad 44 smd rect (at ${def_pos}2.5 -1.6 ${p.rot}) (size 2 1.2) (layers ${p.param.side}.Cu ${p.param.side}.Paste ${p.param.side}.Mask) ${p.net.din.str})
             )
             `}
     if (p.param.side == 'F') {
