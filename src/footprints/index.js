@@ -18,4 +18,5 @@ module.exports = {
     text: require('./text'),
     trrs: require('./trrs'),
     via: require('./via'),
+    tracefix: require('./tracefix'),
 }
