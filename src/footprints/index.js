@@ -19,4 +19,5 @@ module.exports = {
     trrs: require('./trrs'),
     via: require('./via'),
     tracefix: require('./tracefix'),
+    sk6812: require('./sk6812'),
 }
