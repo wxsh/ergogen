@@ -45,8 +45,8 @@ module.exports = {
       if (p.param.reverse) {
         return `
         ${standard}
-        ${pads('B', '-', '')}
-        ${pads('F', '', '-')})
+        ${pads('B', '', '-')}
+        ${pads('F', '-', '')})
         `
       }
       return `
