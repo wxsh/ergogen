@@ -20,4 +20,5 @@ module.exports = {
     via: require('./via'),
     tracefix: require('./tracefix'),
     sk6812: require('./sk6812'),
+    promicro_pretty: require('./promicro_pretty')
 }
