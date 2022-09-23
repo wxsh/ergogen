@@ -21,5 +21,6 @@ module.exports = {
     via: require('./via'),
     tracefix: require('./tracefix'),
     sk6812: require('./sk6812'),
-    usbc: require('./usbc.js')
+    usbc: require('./usbc.js'),
+    rp2040: require('./pico_pretty')
 }
