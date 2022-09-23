@@ -22,5 +22,6 @@ module.exports = {
     tracefix: require('./tracefix'),
     sk6812: require('./sk6812'),
     usbc: require('./usbc.js'),
-    rp2040: require('./pico_pretty')
+    rp2040: require('./pico_pretty'),
+    fang_logo: require('./fang_logo')
 }
