@@ -1751,14 +1751,14 @@ module.exports = {
          (xy 0.6 0) (xy -0.6 0) (xy -0.6 -1) (xy 0 -0.4) (xy 0.6 -1)
 ) (width 0))
     ))
-  (pad 14 smd custom (at -0.774 8.89 ${p.rot + 90}) (size 0.25 0.25) (layers F.Cu) ${p.net.P10.str}
+  (pad 14 smd custom (at -0.774 8.89 ${p.rot + 90}) (size 0.25 0.25) (layers F.Cu)
     (zone_connect 0)
     (options (clearance outline) (anchor circle))
     (primitives
       (gr_line (start 0 0) (end 0.766 -0.766) (width 0.25))
       (gr_line (start 0.766 -0.766) (end 0.766 -4.498) (width 0.25))
       (gr_line (start 0.766 -4.498) (end 0 -5.264) (width 0.25))
-    ))
+    ) ${p.net.P10.str})
   (pad "" smd rect (at 8.14 8.89 ${p.rot + 90}) (size 0.25 1.5) (layers F.Cu))
   (pad 27 thru_hole circle (at 0.774 8.89 ${p.rot + 180}) (size 0.8 0.8) (drill 0.4) (layers *.Cu *.Mask) ${p.net.P21.str}
     (zone_connect 0))

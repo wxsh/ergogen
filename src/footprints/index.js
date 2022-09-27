@@ -23,5 +23,7 @@ module.exports = {
     sk6812: require('./sk6812'),
     usbc: require('./usbc.js'),
     rp2040: require('./pico_pretty'),
-    fang_logo: require('./fang_logo')
+    fang_logo: require('./fang_logo'),
+    diode_routed: require('./diode_routed'),
+    mx_routed: require('./mx_routed')
 }
