@@ -45,8 +45,9 @@ module.exports = {
             (options (clearance outline) (anchor rect))
             (primitives
             (gr_line (start 0 0) (end -2.16 0) (width 0.25))
-        ))              
-        (pad 2 smd custom (at 1.65 0 ${p.rot}) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) ${p.net.from.str}
+        ))       
+        (pad 2 smd rect (at 1.65 0 ${p.rot}) (size 0.9 1.2) (layers B.Cu B.Paste B.Mask) ${p.net.from.str})
+        (pad 2 smd custom (at 1.65 0 ${p.rot}) (size 0.25 0.25) (layers B.Cu) ${p.net.from.str}
             (zone_connect 0)
             (options (clearance outline) (anchor rect))
             (primitives
@@ -56,7 +57,19 @@ module.exports = {
             (gr_line (start -8.16 -2) (end -9.16 -3) (width 0.25))
             (gr_line (start -9.16 -3) (end -9.16 -7) (width 0.25))
         ))
-        (pad 2 smd custom (at 1.65 0 ${p.rot}) (size 0.9 1.2) (layers F.Cu F.Paste F.Mask) ${p.net.from.str}
+        (pad 2 smd rect (at 1.65 0 ${p.rot}) (size 0.9 1.2) (layers F.Cu F.Paste F.Mask) ${p.net.from.str})       
+        (pad 2 smd custom (at 1.65 0 ${p.rot}) (size 0.25 0.25) (layers F.Cu) ${p.net.from.str}
+            (zone_connect 0)
+            (options (clearance outline) (anchor rect))
+            (primitives
+            (gr_line (start 0 0) (end 2.16 0) (width 0.25))
+            (gr_line (start 2.16 0) (end 0.16 -2) (width 0.25))
+            (gr_line (start 0.16 -2) (end -8.16 -2) (width 0.25))
+            (gr_line (start -8.16 -2) (end -9.16 -3) (width 0.25))
+            (gr_line (start -9.16 -3) (end -9.16 -7) (width 0.25))
+        ))
+        (pad 2 smd rect (at 1.65 0 ${p.rot}) (size 0.9 1.2) (layers F.Cu F.Paste F.Mask) ${p.net.from.str})
+        (pad 2 smd custom (at 1.65 0 ${p.rot}) (size 0.25 0.25) (layers F.Cu) ${p.net.from.str}
             (zone_connect 0)
             (options (clearance outline) (anchor rect))
             (primitives
