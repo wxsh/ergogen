@@ -4,7 +4,8 @@ Ergogen is a keyboard generator that aims to provide a common configuration form
 The project grew out of (and is an integral part of) the [Absolem keyboard](https://zealot.hu/absolem), and shares its [Discord server](https://discord.gg/nbKcAZB) as well.
 
 
-
+## Tweaks
+Added quite a few routed footprints
 
 
 
